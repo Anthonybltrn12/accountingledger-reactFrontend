@@ -5,6 +5,7 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TransactionList from './components/TransactionList.jsx';
+import Balance from './components/Balance.jsx'
 
 function App() {
   //const [count, setCount] = useState(0)
@@ -13,6 +14,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/transactions" element={<TransactionList />} />
+        <Route path="/balance" element={<Balance />}/>
       </Routes>
     </BrowserRouter>
   )

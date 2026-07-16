@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from "react";
+import Balance from "./Balance";
+import './TransactionList.css'
 
 function TransactionList(){
     const [trans, setTrans] = useState([]);
@@ -13,9 +15,10 @@ function TransactionList(){
     return(
          <>
       <h1>Transactions</h1>
+      <Balance />
 
       {trans.map(transaction => (
-        <div key={transaction.transactionId}>
+        <div className="transaction-card" key={transaction.transactionId}>
           <h3>{transaction.description}</h3>
           <p>{transaction.vendor}</p>
            {transaction.categoryId === 1 ? (
@@ -25,6 +28,7 @@ function TransactionList(){
     )}
         </div>
       ))}
+      
     </>
     )
 

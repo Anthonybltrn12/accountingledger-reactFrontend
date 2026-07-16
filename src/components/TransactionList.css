@@ -1,0 +1,12 @@
+.transaction-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.transaction-card h3,
+.transaction-card p {
+  margin: 0;
+}
