@@ -22,9 +22,9 @@ function TransactionList(){
           <h3>{transaction.description}</h3>
           <p>{transaction.vendor}</p>
            {transaction.categoryId === 1 ? (
-      <p>${transaction.amount}</p>
+      <p className="deposits">${transaction.amount}</p>
     ) : (
-      <p>-${transaction.amount}</p>
+      <p className="payments">-${transaction.amount}</p>
     )}
         </div>
       ))}
